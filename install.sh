@@ -45,7 +45,8 @@ elif cat /proc/version | grep -Eqi "centos|red hat|redhat"; then
 elif cat /etc/system-release-cpe | grep -Eqi "amazon_linux"; then
     release="amazon_linux"
 else
-    echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+    # echo -e "${red}未检测到系统版本，请联系脚本作者！${plain}\n" && exit 1
+    release="centos"
 fi
 
 arch=$(arch)
